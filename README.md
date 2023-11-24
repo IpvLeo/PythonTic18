@@ -1,4 +1,4 @@
-<h1 align="center">Python-Tic18</h1>
+<h1 align="center">Python - Tic18</h1>
 
 
 <div align="center">
@@ -8,7 +8,7 @@
 
 <h2 align="center">MÓDULO DE PYTHON (POI - PRÁTICA ORIENTADA)</h2>
 <h4 align="center">TURMA 3</h4>
-<h4 align="center">Repositorio de Pessoal de Daniel Coutinho</h4>
+<h4 align="center">Repositorio do Aluno Daniel Coutinho Neto</h4>
 
 <h3 align="center">Conecte-se comigo:</h3>
 <div align="center">
