@@ -57,6 +57,7 @@ if __name__ == "__main__":
 
     while True:
         print("Escolha uma opção:")
+        print()
         print("1. Cadastrar tarefa")
         print("2. Listar todas as tarefas")
         print("3. Listar tarefas concluídas")
