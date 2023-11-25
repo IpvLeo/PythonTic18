@@ -59,14 +59,19 @@ def marcar_tarefa_realizada(id):
 
 
 def editar_tarefa(id):
-    if id > len(tarefas) or id <= 0:
-        print("\nTarefa não encontrada ou identificador invalido.")
-    else:
-        index = id - 1
-        nova_descricao = input("Digite a nova descricao da tarefa: ").capitalize()
-        tarefas[index]["Descricao"] = nova_descricao
+    tarefa_encontrada = None
+    for tarefa in tarefas:
+        if tarefa["ID"] == id:
+            tarefa_encontrada = tarefa
+            break
+
+    if tarefa_encontrada:
+        nova_descricao = input("Digite a nova descrição da tarefa: ").capitalize()
+        tarefa_encontrada["Descricao"] = nova_descricao
         salvar_tarefas(tarefas)
         print(f"\nTarefa {id} editada !!!")
+    else:
+        print("\nTarefa não encontrada ou identificador inválido.")
 
 
 def exibir_tarefas():
