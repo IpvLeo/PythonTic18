@@ -1,9 +1,14 @@
+import os
 
 def reajusta_dez_porcento(lista_colaboradores):
     for empregado in lista_colaboradores:
         empregado['salario'] *= 1.1
 
 def ler_arquivo_e_armazenar_lista(nome_arquivo):
+    if not os.path.exists(nome_arquivo):
+        print(f"Error: File '{nome_arquivo}' not found.")
+        exit()
+
     lista_colaboradores = []
     with open(nome_arquivo, 'r') as arquivo:
         for linha in arquivo:
@@ -17,7 +22,7 @@ def ler_arquivo_e_armazenar_lista(nome_arquivo):
                 'salario': float(dados[5])
             }
             lista_colaboradores.append(empregado)
-    return lista_colaboradores
+    return lista_colaboradores  
 
 
 def exibirInfor(lista_colaboradores):
@@ -31,7 +36,7 @@ def exibirInfor(lista_colaboradores):
 
 
 if __name__ == "__main__":
-    arqFuncionarios = "funcionarios.txt"
+    arqFuncionarios = "/home/daniel/PythonTic18/PP-P003/Exer2/funcionarios.txt"
 
     listaFuncionarios = ler_arquivo_e_armazenar_lista(arqFuncionarios)
 
