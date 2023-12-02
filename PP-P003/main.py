@@ -8,7 +8,7 @@ from Supermercado import *
 
 
 def main():
-    pass
+    print(listaProdutos)
 
 
 if __name__ == "__main__":
