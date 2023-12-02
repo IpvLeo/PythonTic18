@@ -1,6 +1,6 @@
 
 
-from os import remove
+from os import remove, replace
 from threading import local
 
 
@@ -24,7 +24,7 @@ def inserirNovoProduto(produtos):
     
 
 def excluirProduto(produtos):
-    codigo = input("Insira o produto que quer excluir com 13 digitos: ")
+    codigo = input("Insira o codigo do produto que quer excluir com 13 digitos: ")
     if( len(codigo) == 13):
             print("Produto excluido.")
             
@@ -42,14 +42,31 @@ def excluirProduto(produtos):
        
 def listaProdutos(produtos):
     for produto in produtos:
-        print(f"Codigo {produto['codigo']}")
+        print(f"Codigo: {produto['codigo']} \nNome do Produto: {produto['nome']} \nPreço: {produto['preço']}")
     return 
+       
+       
+def alterarProdutos(produtos):
+    codigo = input("Insira o codigo do produto que quer alterar com 13 digitos: ")
+    novocodigo = input("insira o novo produto: ")
+    for produto in produtos:
+        if(codigo == produto['codigo']):
+            novocodigo = codigo.replace( codigo , novocodigo)
+            produto['codigo'] = novocodigo
+            print(novocodigo)
+            print(f"Codigo: {produto['codigo']}")
+            
+        
+            
+       
+
        
 
 tabelaProdutos = []
 inserirNovoProduto(tabelaProdutos)
 listaProdutos(tabelaProdutos)
-excluirProduto(tabelaProdutos)  
+#excluirProduto(tabelaProdutos)
+alterarProdutos(tabelaProdutos)
 
 
 
