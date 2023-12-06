@@ -304,7 +304,37 @@ def main():
         print(lista)
         print("___________________")
 
-    print("Fim do teste!!!")
+    while True:
+        print("\nMenu:")
+        print("1. Incluir um nome na lista de nomes;")
+        print("2. Incluir um salário na lista de salários;")
+        print("3. Incluir uma data na lista de datas;")
+        print("4. Incluir uma idade na lista de idades;")
+        print("5. Percorrer as listas de nomes e salários;")
+        print("6. Calcular o valor da folha com um reajuste de 10%;")
+        print("7. Modificar o dia das datas anteriores a 2019;")
+        print("8. Sair")
+
+        opcao = int(input("Escolha uma opção: "))
+
+        if opcao == 1:
+            nomes.entradaDeDados()
+        elif opcao == 2:
+            salarios.entradaDeDados()
+        elif opcao == 3:
+            datas.entradaDeDados()
+        elif opcao == 4:
+            idades.entradaDeDados()
+        elif opcao == 5:
+            percorreNomeSalario(nomes, salarios)
+        elif opcao == 6:
+            imprimeSalarios10porcento(salarios)
+        elif opcao == 7:
+            imprimeDatasModificadas(datas)
+        elif opcao == 8:
+            break
+    else:
+        print("Opção inválida. Tente novamente.")
 
 if __name__ == "__main__":
     main()
