@@ -242,9 +242,6 @@ class ListaSalarios(AnaliseDados):
 
     def mostraMaior(self):
         print(f"Maior salario: {max(self.__lista)}")
-
-    def listarEmOrdem(self):
-        print(f"Lista de salários ordenada: {sorted(self.__lista)}")
     
     def __str__(self):
         return f"Lista de salarios: {self.__lista}"
